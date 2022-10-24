@@ -1,7 +1,7 @@
 # Data Engineering Project #2 : Bot Saget, A facebook chat data stream processor  
 My first attempt at streaming ETL jobs; technologies include Kafka, GCS, Docker, and terraform
 
-![alt text](image here)
+![alt text](https://raw.githubusercontent.com/rickyriled/DE_project_2/master/bot%20saget%20stream%20flow.png)
 ## Architecture
 **Container** Docker is used to set up a working version of kafka <br><br>
 **Infrastructure:** Terraform is used for 'infrastructure as code' to set up a data lake in GCS<br><br>
