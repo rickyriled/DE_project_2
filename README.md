@@ -29,7 +29,9 @@ I was able to install most of the requierments through guides in the data engine
  
  ## How to run:
  **Scanning Bot/ fbchat API:**<br>
-  uno. make a new facebook account to use as a bot account; DO NOT USE YOUR OWN! FB will likely ban the account at some point<br>
+  0. Pick 3 chats you wish to track, and find the chat IDs ; add one to each producer file respectivley under the `thread_id` variable.<br>
+   - note: if any of the chats are group chats, you must change that producers `thread_type` variable to `ThreadType.GROUP` ; see API docs/<br>
+  |. make a new facebook account to use as a bot account; DO NOT USE YOUR OWN! FB will likely ban the account at some point<br>
   2. Add the bot account email/password to the `email_and_password.json` file<br>
   3. install the API through the guide in the 'requierments' section.<br>
   4. test if the login process works in a random python script/ jupyter notebook; if you run into errors, follow the mentioned github issue post<br>
