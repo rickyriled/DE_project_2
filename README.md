@@ -8,11 +8,11 @@ My first attempt at streaming ETL jobs; technologies include Kafka, GCS, Docker,
 **Streaming** Kafka producers/consumers is used in order to load streaming data from facebook chats into python for transforms and loading into GCS
 
 **Stream flow:** The following process is run continuously through python/kafka
-1. *Facebook Bots* A facebook bot scans a sets of preset chats between me and friends continously for messages, through the unoffical fbchat API
-2. *Kafka Producers* The bot/chat pairs are tied to different producers and and topics in kafka
-3. *Kafka Consumers* 3 consumers subscribe to the various chat topics, and filter/transform the data for user, word usage, and time series data respectively 
-4. *Consumer to GCS* after performing the needed transforms, the respective consumers load the new data into tables in GCS: usr_msg_table, word_table, time_table
-5. *Google Data Studio* The data upload to GCS is tied to a dashboard in google data studio, which updates every minute 
+1. *Facebook Bots:* A facebook bot scans a sets of preset chats between me and friends continously for messages, through the unoffical fbchat API
+2. *Kafka Producers:* The bot/chat pairs are tied to different producers and and topics in kafka
+3. *Kafka Consumers:* 3 consumers subscribe to the various chat topics, and filter/transform the data for user, word usage, and time series data respectively 
+4. *Consumer to GCS:* after performing the needed transforms, the respective consumers load the new data into tables in GCS: usr_msg_table, word_table, time_table
+5. *Google Data Studio:* The data upload to GCS is tied to a dashboard in google data studio, which updates every minute 
 
 
 ## Dashboard:
