@@ -34,11 +34,11 @@ I was able to install most of the requierments through guides in the data engine
   3. install the API through the guide in the 'requierments' section. 
   4. test if the login process works in a random python script/ jupyter notebook; if you run into errors, follow the mentioned github issue post
 
- Docker/Kafka:
-  5. set up/ install docker by following the guides in the DE zoomcamp github/ youtube lectures
-  6. download the kafka yaml file from DE zoomcamp week 6, use `docker-compose up` to build the kafka image/start the container
-  7. confirm the kafka cluster is up by opening your browser to `localhost:9021`
-  8. install the requierments in the requierments.txt file
+ Docker/Kafka:<br>
+  5. set up/ install docker by following the guides in the DE zoomcamp github/ youtube lectures<br>
+  6. download the kafka yaml file from DE zoomcamp week 6, use `docker-compose up` to build the kafka image/start the container<br>
+  7. confirm the kafka cluster is up by opening your browser to `localhost:9021`<br>
+  8. install the requierments in the requierments.txt file<br>
 <br>
  
  GCS through Terraform:
