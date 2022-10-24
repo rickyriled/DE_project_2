@@ -29,7 +29,7 @@ I was able to install most of the requierments through guides in the data engine
  
  ## How to run:
  **Scanning Bot/ fbchat API:**<br>
-  1. make a new facebook account to use as a bot account; DO NOT USE YOUR OWN! it's likely this account will be banned by FB at some point<br>
+  uno. make a new facebook account to use as a bot account; DO NOT USE YOUR OWN! it's likely this account will be banned by FB at some point<br>
   2. Add the bot account email/password to the `email_and_password.json` file<br>
   3. install the API through the guide in the 'requierments' section.<br>
   4. test if the login process works in a random python script/ jupyter notebook; if you run into errors, follow the mentioned github issue post<br>
