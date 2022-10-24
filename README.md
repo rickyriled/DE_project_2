@@ -28,26 +28,26 @@ I was able to install most of the requierments through guides in the data engine
 
  
  ## How to run:
- Scanning Bot/ fbchat API:
-  . make a new facebook account to use as a bot account; DO NOT USE YOUR OWN! it's likely this account will be banned by FB at some point
-  2. Add the bot account email/password to the `email_and_password.json` file
-  3. install the API through the guide in the 'requierments' section. 
-  4. test if the login process works in a random python script/ jupyter notebook; if you run into errors, follow the mentioned github issue post
+ **Scanning Bot/ fbchat API:**<br>
+  1. make a new facebook account to use as a bot account; DO NOT USE YOUR OWN! it's likely this account will be banned by FB at some point<br>
+  2. Add the bot account email/password to the `email_and_password.json` file<br>
+  3. install the API through the guide in the 'requierments' section.<br>
+  4. test if the login process works in a random python script/ jupyter notebook; if you run into errors, follow the mentioned github issue post<br>
 
- Docker/Kafka:<br>
+ **Docker/Kafka:**<br>
   5. set up/ install docker by following the guides in the DE zoomcamp github/ youtube lectures<br>
   6. download the kafka yaml file from DE zoomcamp week 6, use `docker-compose up` to build the kafka image/start the container<br>
   7. confirm the kafka cluster is up by opening your browser to `localhost:9021`<br>
   8. install the requierments in the requierments.txt file<br>
 <br>
  
- GCS through Terraform:<br>
+ **GCS through Terraform:** <br>
   9. follow the steps in the DE zoomcamp guide to set up your GCS account, envrionment varaibles and project name<br>
   10. add your gcs project name to the `passcode.sh` file<br>
   11. build the infrastrcture GCS data lake `bash tf_make_bash.sh` ; note this pulls a code listed in my git-ignore file.<br>
     - later when you want to take down your gcs bucket, use  `bash tf_destroy_bash.sh<br>
  
- Kafka Producers/Consumers:<br>
+**Kafka Producers/Consumers:** <br>
   12. run all three producer and all three consumer python scripts in the background on your computer; kafka will auto-setup the topics.<br>
     - check in your GCS bucket if the csv files are there; if so, everything is working!
 
