@@ -29,7 +29,7 @@ I was able to install most of the requierments through guides in the data engine
  
  ## How to run:
  Scanning Bot/ fbchat API:
-  1. make a new facebook account to use as a bot account; DO NOT USE YOUR OWN! it's likely this account will be banned by FB at some point
+  . make a new facebook account to use as a bot account; DO NOT USE YOUR OWN! it's likely this account will be banned by FB at some point
   2. Add the bot account email/password to the `email_and_password.json` file
   3. install the API through the guide in the 'requierments' section. 
   4. test if the login process works in a random python script/ jupyter notebook; if you run into errors, follow the mentioned github issue post
@@ -41,13 +41,13 @@ I was able to install most of the requierments through guides in the data engine
   8. install the requierments in the requierments.txt file<br>
 <br>
  
- GCS through Terraform:
-  9. follow the steps in the DE zoomcamp guide to set up your GCS account, envrionment varaibles and project name
-  10. add your gcs project name to the `passcode.sh` file
-  11. build the infrastrcture GCS data lake `bash tf_make_bash.sh` ; note this pulls a code listed in my git-ignore file.
-    - later when you want to take down your gcs bucket, use  `bash tf_destroy_bash.sh
+ GCS through Terraform:<br>
+  9. follow the steps in the DE zoomcamp guide to set up your GCS account, envrionment varaibles and project name<br>
+  10. add your gcs project name to the `passcode.sh` file<br>
+  11. build the infrastrcture GCS data lake `bash tf_make_bash.sh` ; note this pulls a code listed in my git-ignore file.<br>
+    - later when you want to take down your gcs bucket, use  `bash tf_destroy_bash.sh<br>
  
- Kafka Producers/Consumers:
-  12. run all three producer and all three consumer python scripts in the background on your computer; kafka will auto-setup the topics.
+ Kafka Producers/Consumers:<br>
+  12. run all three producer and all three consumer python scripts in the background on your computer; kafka will auto-setup the topics.<br>
     - check in your GCS bucket if the csv files are there; if so, everything is working!
 
