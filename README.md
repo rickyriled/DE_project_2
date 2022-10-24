@@ -24,7 +24,7 @@ I was able to install most of the requierments through guides in the data engine
 1. **Docker/Terraform/GCP Cloud Platform:** [DE zoomcamp guide](https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main/week_1_basics_n_setup/1_terraform_gcp)
 2. **Kafka/Kafka Docker Image** [DE zoomcamp guide](https://github.com/DataTalksClub/data-engineering-zoomcamp/tree/main/week_6_stream_processing)
 4. **fbchat API:** [ Docs](https://fbchat.readthedocs.io/en/stable/)<br>
-      - note, theres some common errors in setting this up; follow this github issue post: https://github.com/fbchat-dev/fbchat/issues/615
+      -- note, theres some common errors in setting this up; follow this github issue post: https://github.com/fbchat-dev/fbchat/issues/615
 
  
  ## How to run:
@@ -47,9 +47,9 @@ I was able to install most of the requierments through guides in the data engine
   9. follow the steps in the DE zoomcamp guide to set up your GCS account, envrionment varaibles and project name<br>
   10. add your gcs project name to the `passcode.sh` file<br>
   11. build the infrastrcture GCS data lake `bash tf_make_bash.sh` ; note this pulls a code listed in my git-ignore file.<br>
-    - later when you want to take down your gcs bucket, use  `bash tf_destroy_bash.sh<br>
+    -- later when you want to take down your gcs bucket, use  `bash tf_destroy_bash.sh<br>
  
 **Kafka Producers/Consumers:** <br>
   12. run all three producer and all three consumer python scripts in the background on your computer; kafka will auto-setup the topics.<br>
-    - check in your GCS bucket if the csv files are there; if so, everything is working!
+    -- check in your GCS bucket if the csv files are there; if so, everything is working!
 
