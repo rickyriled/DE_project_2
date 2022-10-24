@@ -7,9 +7,9 @@ import os
 import sys
 import pandas as pd
 
-CSV_NAME='table.csv'
+CSV_NAME='user_msg_table.csv'
 BUCKET_NAME='kafka_buck'
-topic = 'test_topic'
+topic = ['chat_one', 'chat_two', 'chat_three']
 
 PATH=os.environ['GOOGLE_APPLICATION_CREDENTIALS']
 storage_client = storage.Client(PATH)
@@ -20,7 +20,7 @@ consumer = KafkaConsumer(
      bootstrap_servers=['localhost:9092'],
      auto_offset_reset='earliest',
      enable_auto_commit=True,
-     group_id='test_id',
+     group_id='user_id',
      value_deserializer=lambda x: loads(x.decode('utf-8')))
 
 
@@ -36,10 +36,12 @@ while(True):
 
         #produce data entry
         print('produce',end="....")
-        text = list(message.value.values())[0]
-        time = list(message.value.keys())[0]
+        datalist= list(message.value.values())[0]
+  
+        user_ID = datalist[1]
+        msg_len = len(datalist[2].split(" "))
 
-        data={'time':[time], 'text' : [text]}
+        data={'user_id':[user_ID], 'count' : [1], 'msg_len' : [msg_len]}
         df2=pd.DataFrame(data)
 
         #append and write update

@@ -5,14 +5,18 @@ from fbchat.models import *
 
 from time import sleep
 from json import dumps
+import json as json
 from kafka import KafkaProducer
 
-thread_id = "---------------"
+from datetime import datetime
+
+thread_id = "---------"  #Enter thread ID heere
 thread_type = ThreadType.USER
-topic = 'test_topic'
+topic = 'chat_one'
 
 #this file 'email_and_password.json' is not included in the repo of course,
-#it's just a json file where the key is the account email and the value is the account password 
+#it's just a json file where the key is the account email and the value 
+# is the account password of the bot
 login_info=json.load(open('email_and_password.json'))
 EMAIL=list(login_info.keys())[0]
 PASSWORD=list(login_info.values())[0]
@@ -27,14 +31,27 @@ producer = KafkaProducer(bootstrap_servers=['localhost:9092'],
 tmts_old='0'
 i=0
 
-while client.isLoggedIn():
-    time.sleep(2)
-    tm=client.fetchThreadMessages(thread_id=thread_id, limit=1)[0]
-    tmts=tm.timestamp
-    tmtx=tm.text
+def get_data(msg):
+    fb_msg=msg[0]
     
+    timestamp = float(fb_msg.timestamp)/1000
+    date_time = datetime.fromtimestamp(timestamp)
+    
+    user_id = fb_msg.author
+    
+    msg_txt = fb_msg.text
+    
+    return [str(date_time), user_id, msg_txt]
+
+while True:
+    time.sleep(2)
+    message=client.fetchThreadMessages(thread_id=thread_id, limit=1)
+    tm=message[0]
+    tmts=tm.timestamp
+    
+    important_data=get_data(message)
     if tmts != tmts_old:
-        data = { tmts : tmtx }
+        data = { 'prod_1' : important_data }
         producer.send(topic, value=data)
-        print("producing "+tmtx+", at "+tmts)
+        print("producing "+str(important_data)+", at "+tmts)
         tmts_old=tmts
