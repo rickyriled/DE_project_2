@@ -16,8 +16,8 @@ My first attempt at streaming ETL jobs; technologies include Kafka, GCS, Docker,
 
 
 ## Dashboard:
-The dashboard was built using google datastudio.!!!!!!ADD DESCRIPTION!!!!!! HERE <br>
-![alt text]()
+The dashboard was built using google datastudio. It visualizes (1) total message overtime/ added at a given moment, (2) message length statistics and message distribution by FB users, (3) total unique words over time/ most common words <br>
+![alt text](https://raw.githubusercontent.com/rickyriled/DE_project_2/master/My_Facebook_Analytics.png)
 
 ## Requierments:
 I was able to install most of the requierments through guides in the data engineering zoomcamp course, or through online articles. Thanks to everyone who helped with their public repos/ articles!
