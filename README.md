@@ -1,4 +1,4 @@
-# Data Engineering Project #1 : Fitpipe, a hourly max heart rate ETL pipeline 
+# Data Engineering Project #2 : Bot Saget, A facebook chat data stream processor  
 My first attempt at streaming ETL jobs; technologies include Kafka, GCS, Docker, and terraform
 
 ![alt text](image here)
