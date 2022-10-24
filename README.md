@@ -39,6 +39,7 @@ I was able to install most of the requierments through guides in the data engine
   6. download the kafka yaml file from DE zoomcamp week 6, use `docker-compose up` to build the kafka image/start the container
   7. confirm the kafka cluster is up by opening your browser to `localhost:9021`
   8. install the requierments in the requierments.txt file
+<br>
  
  GCS through Terraform:
   9. follow the steps in the DE zoomcamp guide to set up your GCS account, envrionment varaibles and project name
